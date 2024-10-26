@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@font-face {
+    font-family: 'Poppins';
+    src: url('../assets/fonts/Poppins/Poppins-Regular.ttf') format('truetype'),
+         url('../assets/fonts/Poppins/Poppins-Bold.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Cairo';
+    src: url('../assets/fonts/Cairo/Cairo-VariableFont_slnt,wght.ttf') format('truetype');
+  
+    font-weight: 400;
+    font-style: normal;
+  }
+pre {
+    font-size: 0.7em;
+    /* line-height: 1.8em; */
+  
+    width: 100%;
+    /* overflow: hidden; */
+    /* display: flex; */
+    white-space: pre;
+    margin: 1em 0;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+}
+  
+
+
+.container {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: self-start;
+    margin: 0 auto;
+}
+
+

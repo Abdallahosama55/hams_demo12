@@ -1,0 +1,126 @@
+/* src/styles/global.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* global.css or index.css */
+@font-face {
+  font-family: 'Poppins';
+  src: url('../assets/fonts/Poppins/Poppins-Regular.ttf') format('truetype'),
+       url('../assets/fonts/Poppins/Poppins-Bold.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Cairo';
+  src: url('../assets/fonts/Cairo/Cairo-VariableFont_slnt,wght.ttf') format('truetype');
+
+  font-weight: 400;
+  font-style: normal;
+}
+html,
+body {
+  height: 100%;
+  font-family: 'Poppins' !important;
+}
+
+.slider {
+  display: flex; /* Ensure the slider uses flexbox */
+  align-items: center; /* Center items vertically */
+}
+.faded-edges {
+  mask-image: linear-gradient(
+    to left,
+    transparent,
+    white 20%,
+    white 80%,
+    transparent
+  );
+}
+.faded-edges2 {
+  mask-image: linear-gradient(
+    to left,
+    transparent,
+    white 20%,
+    white 80%,
+    transparent
+  );
+}
+
+.boxanimated {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: "100%";
+  border: 3px solid #0000;
+  border-radius: 3px;
+  background:
+    linear-gradient(#fff, #fff) padding-box,
+    linear-gradient(var(--angle), #8485e6, #21228e, #5253b917) border-box;
+  animation: 4s rotate linear infinite;
+}
+
+@keyframes rotate {
+  to {
+    --angle: 360deg;
+  }
+}
+
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+.cover-bg {
+  background-image: url("../assets/images/mobiles.svg");
+
+background:cover;
+
+}
+.box {
+  @apply relative  rounded-xl; /* Main box styles */
+}
+
+.box:after {
+  content: "";
+  @apply absolute w-12 h-12 -top-2 -right-2 border-t-4 border-r-4 border-[#5253B9] rounded-tr-xl; /* Top-right corner */
+}
+
+.box:before {
+  content: "";
+  @apply absolute w-12 h-12 -bottom-1 -left-1 border-b-4 border-l-4 border-[#5253B9] rounded-bl-xl; /* Bottom-left corner */
+}
+
+/* Add these styles to your global.css or component's CSS */
+@keyframes slideUp {
+  0% {
+    transform: translateY(46%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.slide-up {
+  animation: slideUp 1s ease-out;
+}
+
+.gradient-text-header {
+  background: linear-gradient(90deg, #3132A9, #8485E6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.gradient-bg-header{
+  background: linear-gradient(180deg, rgba(132, 133, 230, 0.17) 11.05%, rgba(49, 50, 169, 0.17) 29.05%, rgba(255, 255, 255, 0.17) 90.05%);
+
+}
+.gradient-shadow-bg{
+  box-shadow: 0px 4px 20px rgba(132, 133, 230, 0.17), 0px 4px 20px rgba(49, 50, 169, 0.17), 0px 4px 20px rgba(255, 255, 255, 0.17);
+
+}
