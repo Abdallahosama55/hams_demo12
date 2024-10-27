@@ -35,7 +35,7 @@ const InfiniteScrollX = ({ className, images }) => {
           {images.map((item, index) => (
             <CarouselItem
               key={index}
-              className="pt-1 w-full sm:basis-1/3 basis-1/3 md:basis-1/4 lg:basis-1/5 2xl:basis-1/6"
+              className="pt-1 w-full flex items-center justify-center sm:basis-1/3 basis-1/3 md:basis-1/4 lg:basis-1/5 2xl:basis-1/6"
             >
               <div className="p-1">
                 <img
