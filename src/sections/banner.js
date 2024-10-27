@@ -12,8 +12,8 @@ import blurimg from "../assets/images/blur.png";
 import SliderBanner from "../components/SliderBanner";
 import InfiniteScrollX from "./InfiniteScrollX";
 import img1 from '../assets/images/slider/aws.webp';
-import img2 from '../assets/images/slider/nn.svg';
-import img3 from '../assets/images/slider/monsh.svg';
+import img2 from '../assets/images/slider/NVIDIA_logo.svg';
+import img3 from '../assets/images/slider/monsha.svg';
 import img4 from '../assets/images/slider/vis.svg';
 
 const Banner = () => {
@@ -106,6 +106,14 @@ const Banner = () => {
           { id: 6, src: img2, alt: "Image 6" },
           { id: 7, src: img1, alt: "Image 7" },
           { id: 8, src: img2, alt: "Image 8" },
+          { id: 9, src: img1, alt: "Image 1" },
+          { id: 10, src: img2, alt: "Image 2" },
+          { id: 11, src: img3, alt: "Image 3" },
+          { id: 12, src: img4, alt: "Image 4" },
+          { id: 13, src: img1, alt: "Image 5" },
+          { id: 14, src: img2, alt: "Image 6" },
+          { id: 15, src: img1, alt: "Image 7" },
+          { id: 16, src: img2, alt: "Image 8" },
         ]}
       />
     </section>

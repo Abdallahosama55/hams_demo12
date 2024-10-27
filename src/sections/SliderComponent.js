@@ -3,7 +3,7 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import img1 from '../assets/images/slider/aws.webp';
 import img2 from '../assets/images/slider/nn.svg';
-import img3 from '../assets/images/slider/monsh.svg';
+import img3 from '../assets/images/slider/mon2.svg';
 import img4 from '../assets/images/slider/vis.svg';
 
 import { Text } from 'theme-ui';
@@ -36,6 +36,14 @@ const images = [
   { id: 6, src: img2, alt: "Image 6" },
   { id: 7, src: img1, alt: "Image 7" },
   { id: 8, src: img2, alt: "Image 8" },
+  { id: 9, src: img1, alt: "Image 1" },
+  { id: 10, src: img2, alt: "Image 2" },
+  { id: 11, src: img3, alt: "Image 3" },
+  { id: 12, src: img4, alt: "Image 4" },
+  { id: 13, src: img1, alt: "Image 5" },
+  { id: 14, src: img2, alt: "Image 6" },
+  { id: 15, src: img1, alt: "Image 7" },
+  { id: 16, src: img2, alt: "Image 8" },
 ];
 
 function SliderComponent() {
