@@ -1,5 +1,5 @@
 import React from "react";
-import { Carousel } from '@shadcn/ui'; // Adjust the import based on the actual export from the library
+// import { Carousel } from '@shadcn/ui'; // Adjust the import based on the actual export from the library
 import { useTranslation } from "react-i18next";
 import img1 from '../assets/images/slider/aws.webp';
 import img2 from '../assets/images/slider/nn.svg';
@@ -47,7 +47,7 @@ function SliderComponent() {
         {renderStyledText(t('poweredby'))}
         <div className="w-full flex justify-center"></div>
       </Text> */}
-      <Carousel
+      {/* <Carousel
         autoPlay={true}
         interval={3000}
         loop={true}
@@ -68,7 +68,7 @@ function SliderComponent() {
             </div>
           </div>
         ))}
-      </Carousel>
+      </Carousel> */}
     </div>
   );
 }

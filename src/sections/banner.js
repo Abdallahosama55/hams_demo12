@@ -10,6 +10,11 @@ import { rgba } from "polished";
 import { TypeAnimation } from "react-type-animation";
 import blurimg from "../assets/images/blur.png";
 import SliderBanner from "../components/SliderBanner";
+import InfiniteScrollX from "./InfiniteScrollX";
+import img1 from '../assets/images/slider/aws.webp';
+import img2 from '../assets/images/slider/nn.svg';
+import img3 from '../assets/images/slider/monsh.svg';
+import img4 from '../assets/images/slider/vis.svg';
 
 const Banner = () => {
   const { i18n, t } = useTranslation();
@@ -30,10 +35,13 @@ const Banner = () => {
   }, [i18n]);
 
   return (
-    <section id="home" sx={styles.section}   >
+    <section id="home" sx={styles.section}>
       <div className="lg:mx-24 py-12 lg:py-2   ">
         <div className="grid justify-center h-full items-center xl:grid-cols-2 grid-cols-1  md:grid-cols-1 sm:grid-cols-1 ">
-          <Box sx={styles.bannerContent} className="relative md:mt-12 xl:mt-4  flex flex-col p-8 pb-0  items-start   justify-start   ">
+          <Box
+            sx={styles.bannerContent}
+            className="relative md:mt-12 xl:mt-4  flex flex-col p-8 pb-0  items-start   justify-start   "
+          >
             {" "}
             {/* Add relative here */}
             <div className=" my-2 shadow-custom px-1 py-2 text-start ps-5  rounded-3xl bg-white text-sm ">
@@ -43,20 +51,16 @@ const Banner = () => {
             <div>
               {" "}
               {/* Ensure text is above image */}
-              <h1  style={{ lineHeight: "1" }}>
-                <span
-                  className=" text-black gradient-text"
-                
-              
-                >
+              <h1 style={{ lineHeight: "1" }}>
+                <span className=" text-black gradient-text">
+                  <span className=" px-2 lg:text-[32px] text-[22px] font-[900]  leading-10">
+                    {" "}
+                    {subHeaderText}
+                  </span>
 
-                <span className=" px-2 lg:text-[32px] text-[22px] font-[900]  leading-10">  {subHeaderText}</span>
-              
-             
-           <span className="text-[#8485E6] lg:text-[32px] text-[22px] font-[900]   leading-10">{ t('banner_word1')} </span>
-           
-                
-              
+                  <span className="text-[#8485E6] lg:text-[32px] text-[22px] font-[900]   leading-10">
+                    {t("banner_word1")}{" "}
+                  </span>
                 </span>
               </h1>
               <p
@@ -70,7 +74,6 @@ const Banner = () => {
               >
                 {t("Description-hjz")}
               </p>
-       
             </div>
             {/* Background image */}
             <img
@@ -81,23 +84,30 @@ const Banner = () => {
             />
           </Box>
 
-         <div className=" lg:flex w-full justify-center">
-         <div className="  relative  flex-col items-center  justify-center p-7 pt-1 lg:w-[80%] sm:w-[85%] md:w-[85%]   xl:w-[95%] mt-[10%] h-full">
-            <SliderBanner />
-
+          <div className=" lg:flex w-full justify-center">
+            <div className="  relative  flex-col items-center  justify-center p-7 pt-1 lg:w-[80%] sm:w-[85%] md:w-[85%]   xl:w-[95%] mt-[10%] h-full">
+              <SliderBanner />
+            </div>
           </div>
-
-         </div>
         </div>
         <div>
           <h3 className="title-know-more">{t("know-more-title")}</h3>
         </div>
-       
       </div>
-    
 
-      <SliderComponent />
-     
+      {/* <SliderComponent /> */}
+      <InfiniteScrollX
+        images={[
+          { id: 1, src: img1, alt: "Image 1" },
+          { id: 2, src: img2, alt: "Image 2" },
+          { id: 3, src: img3, alt: "Image 3" },
+          { id: 4, src: img4, alt: "Image 4" },
+          { id: 5, src: img1, alt: "Image 5" },
+          { id: 6, src: img2, alt: "Image 6" },
+          { id: 7, src: img1, alt: "Image 7" },
+          { id: 8, src: img2, alt: "Image 8" },
+        ]}
+      />
     </section>
   );
 };
@@ -125,13 +135,9 @@ const styles = {
       fontSize: [1, null, null, 2, 3],
       lineHeight: [1.5, null, null, 2, null, 2.33],
       color: "textSecondary",
-     
+
       m: [null, null, null, "30px auto", 0],
       mt: [3, null, null, null, 5],
     },
   },
-
-
-
-
 };
