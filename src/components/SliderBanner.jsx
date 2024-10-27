@@ -33,25 +33,25 @@ function SliderBanner() {
       <div className="relative mt-7 banner-div overflow-hidden flex justify-center slide-up transition-opacity duration-300">
     
         <div
-          className="z-0 gap-x-0 gap-y-0 grid-rows-[auto_auto] bg-white rounded-[170px] grid-cols-[9fr_29fr_11fr] auto-cols-fr w-full min-h-full grid absolute inset-x-0"
+          className="z-0 gap-x-0 gap-y-0 grid-rows-[auto_auto] bg-white rounded-[170px] grid-cols-[9fr_23fr_11fr] auto-cols-fr w-full min-h-full grid absolute inset-x-0"
           dir="ltr"
         >
            <img
             src={left}
             alt=""
-            className="phone_bg-image"
+            className="phone_bg-image w-full"
             loading="lazy"
           />
           <img
             src={middle}
             alt=""
-            className="phone_bg-image "
+            className="phone_bg-image w-full "
             loading="lazy"
           />
           <img
             src={right}
             alt=""
-            className="phone_bg-image"
+            className="phone_bg-image w-full"
             loading="lazy"
           /> 
            {/* <StaticImage
