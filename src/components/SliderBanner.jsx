@@ -75,7 +75,7 @@ function SliderBanner() {
         </div>
 
         <div className="content-img z-20 mt-12 flex flex-col mb-[8px] w-full lg:my-[40px] max-w-[80%] items-center text-xs justify-center text-start text-black">
-          <div className="md:text-[14px] mt-4 text-[10px] lg:text-[14px] lg:min-h-[210px] md:h-[160px] min-h-[100px] border-[2px]  pb-3 w-full rounded-lg">
+          <div className="md:text-[14px] mt-4 text-[10px] bg-[#F8F8FA] lg:text-[14px] lg:min-h-[210px] md:h-[160px] min-h-[100px] border-[2px]  pb-3 w-full rounded-lg">
             {selectedItem ? (
               <>
                 <HeaderMobileBanner />
