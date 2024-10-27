@@ -1,9 +1,9 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next'; // Import the useTranslation hook
 import call from '../assets/images/call_center.svg';
-import lang from '../assets/images/lang.svg';
+import lang from '../assets/images/Transcript.svg';
 import voice2 from '../assets/images/voice2.svg';
-import vm from '../assets/images/vm.png';
+import vm from '../assets/images/vision.svg';
 import { FaArrowRightLong } from "react-icons/fa6";
 
 function ProductOptimizedUseCase() {
@@ -49,7 +49,7 @@ function ProductOptimizedUseCase() {
         {useCases.map((useCase) => (
           <div
             key={useCase.id}
-            className={`${useCase.colSpan} flex flex-col gap-3 py-6 border-[#9b9beb2c] border-[1px] px-6 bg-[#C6C6C617] rounded-2xl`}
+            className={`${useCase.colSpan} flex flex-col cursor-pointer gap-3 py-6 border-[#9b9beb2c] border-[1px] px-6 bg-[#C6C6C617] rounded-2xl`}
           >
             <h1 className="text-[#692BEF] text-lg font-bold">
               {t(useCase.titleKey)} {/* Translate title */}
@@ -60,8 +60,8 @@ function ProductOptimizedUseCase() {
             <span className='text-black cursor-pointer font-[500] gap-3 flex items-center'>
               {t('learn_more')} <FaArrowRightLong />
             </span>
-            <div className='flex justify-center items-center w-full'>
-              <img src={useCase.imgSrc} alt={t(useCase.titleKey)} className='w-[200px]' />
+            <div className='flex justify-center items-center    h-full w-full'>
+              <img src={useCase.imgSrc} alt={t(useCase.titleKey)} className='w-[200px] mt-12' />
             </div>
           </div>
         ))}
