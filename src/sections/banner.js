@@ -35,7 +35,7 @@ const Banner = () => {
   }, [i18n]);
 
   return (
-    <section id="home" sx={styles.section}>
+    <section id="home" sx={styles.section} className=" gradient-bg-header">
       <div className="lg:mx-24 py-12 lg:py-2   ">
         <div className="grid justify-center h-full items-center xl:grid-cols-2 grid-cols-1  md:grid-cols-1 sm:grid-cols-1 ">
           <Box
@@ -76,12 +76,7 @@ const Banner = () => {
               </p>
             </div>
             {/* Background image */}
-            <img
-              src={blurimg}
-              alt="blur"
-              className="absolute top-[-90px] start-[-120px] h-[300px] w-[300px] opacity-50"
-              style={{ zIndex: 0 }} // Ensure the image is behind the text
-            />
+          
           </Box>
 
           <div className=" lg:flex w-full justify-center">

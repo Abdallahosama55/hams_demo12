@@ -6,7 +6,9 @@ import BannerForm from "./BannerForm";
 import HeaderMobileBanner from "./HeaderMobileBanner";
 import SliderButton from "./ButtonSlider";
 import pin from "../assets/images/pinss.svg";
-
+import left from "../assets/images/left.svg"
+import middle from "../assets/images/middle.svg"
+import right from "../assets/images/right.svg"
 function SliderBanner() {
   const [selectedId, setSelectedId] = useState(1);
   const [isImageLoaded, setIsImageLoaded] = useState(true);
@@ -29,16 +31,30 @@ function SliderBanner() {
       </div>
 
       <div className="relative mt-7 banner-div overflow-hidden flex justify-center slide-up transition-opacity duration-300">
-        {/* <StaticImage
-              src="../assets/images/mobileframe.svg"
-              alt="Mobile frame"
-              onLoad={() => setIsImageLoaded(true)}
-            /> */}
+    
         <div
-          className="z-0 gap-x-0 gap-y-0 grid-rows-[auto_auto] grid-cols-[9fr_23fr_11fr] auto-cols-fr w-full min-h-full grid absolute inset-x-0"
+          className="z-0 gap-x-0 gap-y-0 grid-rows-[auto_auto] bg-white rounded-[170px] grid-cols-[9fr_24fr_11fr] auto-cols-fr w-full min-h-full grid absolute inset-x-0"
           dir="ltr"
         >
-          <StaticImage
+           <img
+            src={left}
+            alt=""
+            className="phone_bg-image"
+            loading="lazy"
+          />
+          <img
+            src={middle}
+            alt=""
+            className="phone_bg-image "
+            loading="lazy"
+          />
+          <img
+            src={right}
+            alt=""
+            className="phone_bg-image"
+            loading="lazy"
+          /> 
+           {/* <StaticImage
             src="../assets/images/left.svg"
             alt=""
             className="phone_bg-image"
@@ -55,11 +71,11 @@ function SliderBanner() {
             alt=""
             className="phone_bg-image"
             loading="lazy"
-          />
+          /> */}
         </div>
 
         <div className="content-img z-20 mt-12 flex flex-col mb-[8px] w-full lg:my-[40px] max-w-[80%] items-center text-xs justify-center text-start text-black">
-          <div className="md:text-[14px] mt-4 text-[10px] lg:text-[14px] lg:min-h-[210px] md:h-[160px] min-h-[100px] border-[2px] bg-[#F8F8FA] pb-3 w-full rounded-lg">
+          <div className="md:text-[14px] mt-4 text-[10px] lg:text-[14px] lg:min-h-[210px] md:h-[160px] min-h-[100px] border-[2px]  pb-3 w-full rounded-lg">
             {selectedItem ? (
               <>
                 <HeaderMobileBanner />
