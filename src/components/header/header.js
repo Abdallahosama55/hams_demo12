@@ -1,9 +1,9 @@
-/** @jsx jsx */
+import React from "react";
 import { jsx } from "theme-ui";
 import { useTranslation } from "react-i18next";
 import { useState, useEffect } from "react";
-import { Link as ScrollLink } from "react-scroll"; // Importing Link from react-scroll
-import { Link as GatsbyLink } from "gatsby"; // Import Gatsby's Link
+import { Link as ScrollLink, scroller } from "react-scroll";
+import { Link as GatsbyLink, navigate } from "gatsby"; // Import Gatsby's Link and navigate
 import Logo from "components/logoHeader";
 import "../../i18n/config";
 import Subitem from "../cards/Subitem";
@@ -14,9 +14,19 @@ export default function Header() {
   const [currentLang, setCurrentLang] = useState(i18n.language);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [hoveredItem, setHoveredItem] = useState(null);
+  const menuItems = [
+    { name: "Home", anchor: "/", subItem: false, isHome: true },
+    { name: "product", anchor: "", subItem: true },
+    { name: "FAQs", anchor: "FAQs", subItem: false },
+    { name: "How it work", anchor: "HowUseIt", subItem: false },
+  ];
+  
 
+  const toggleSidebar = () => {
+    setIsSidebarOpen(!isSidebarOpen);
+  };
+  
   useEffect(() => {
-    // Set initial body direction based on the language
     const initialLang = i18n.language;
     document.documentElement.setAttribute("lang", initialLang);
     document.body.style.direction = initialLang === "ar" ? "rtl" : "ltr";
@@ -31,18 +41,28 @@ export default function Header() {
     setCurrentLang(newLang);
   };
 
-  const toggleSidebar = () => {
-    setIsSidebarOpen(!isSidebarOpen);
+  const handleScrollLinkClick = (anchor) => {
+    if (window.location.pathname !== "/") {
+      // Navigate to the homepage first if on a different page
+      navigate("/");
+      
+      // Add a short delay to ensure the navigation completes before scrolling
+      setTimeout(() => {
+        scroller.scrollTo(anchor, {
+          smooth: true,
+          duration: 500,
+        });
+      }, 300);
+    } else {
+      // Scroll directly if already on the homepage
+      scroller.scrollTo(anchor, {
+        smooth: true,
+        duration: 500,
+      });
+    }
   };
 
-  const menuItems = [
-    { name: "Home", anchor: "/", subItem: false, isHome: true },
-    { name: "product", anchor: "", subItem: true },
-    { name: "FAQs", anchor: "FAQs", subItem: false },
-    { name: "How it work", anchor: "HowUseIt", subItem: false },
-  ];
-
-  const renderMenuItems = (isMobile = false) =>
+  const renderMenuItems = () =>
     menuItems.map((item) => (
       <li
         key={item.anchor}
@@ -57,11 +77,8 @@ export default function Header() {
             </span>
           </GatsbyLink>
         ) : (
-          <ScrollLink
-            to={item.anchor}
-            smooth
-            duration={500}
-            activeClass="active"
+          <span
+            onClick={() => handleScrollLinkClick(item.anchor)}
             className="transition duration-300 cursor-pointer"
           >
             <span className="flex items-center text-gray-700 hover:text-[#5253B9]">
@@ -80,7 +97,7 @@ export default function Header() {
                 <Subitem />
               </div>
             )}
-          </ScrollLink>
+          </span>
         )}
       </li>
     ));
@@ -114,7 +131,7 @@ export default function Header() {
       </nav>
 
       <div
-        className={`lg:hidden h-[100vh] fixed inset-0 bg-black bg-opacity-50 transition-transform duration-300 ${
+        className={`lg:hidden min-h-[100vh]  fixed inset-0 bg-black bg-opacity-50 transition-transform duration-300 ${
           isSidebarOpen ? "translate-x-0" : "translate-x-full"
         }`}
         onClick={toggleSidebar}
@@ -124,7 +141,7 @@ export default function Header() {
           onClick={(e) => e.stopPropagation()}
         >
           <ul id="main-menu-mobile" className={`flex flex-col w-full flex-grow gap-3`}>
-            {renderMenuItems(true)}
+            {renderMenuItems()}
           </ul>
 
           <div className="button-group flex flex-col gap-5 items-start mt-5">
