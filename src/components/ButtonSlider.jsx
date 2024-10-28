@@ -38,7 +38,7 @@ function SliderButton({ currentItems, selectedId, handleSelectId }) {
                 className={`rounded-full w-full py-2 xl:py-1 lg:py-1 h-full px-6 shadow-custom
                   ${
                     selectedId === index
-                      ? "bg-gradient-to-r text-white from-[#5253B9] to-[#8888C4]"
+                      ? "bg-[#5253B9] text-white "
                       : "bg-white text-black border"
                   }`}
               >

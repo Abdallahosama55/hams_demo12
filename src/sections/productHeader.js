@@ -39,7 +39,7 @@ function ProductHeader() {
             <h1 className="gradient-text-header lg:text-[2.4em] font-bold text-[36px] text-start">
               {t("title_Product_header")}
             </h1>
-            <p className="text-[#7D7D7D] lg:w-[75%] xl:w-[89%] text-[1em] text-start">
+            <p className="text-[#8485E6]  lg:w-[75%] xl:w-[89%] text-[1em] text-start">
               {t("description_Product_header")}
             </p>
 
@@ -47,8 +47,8 @@ function ProductHeader() {
               {featureItems.map((item) => (
                 <div key={item.key} className="grid grid-cols-[18px_1fr] gap-1 items-start">
                   <FaCircle color="#5556BB" className="w-[16px] border-[3px] rounded-full border-[#8384E5] h-[16px] mt-1" />
-                  <p className="text-[#9A9A9A]">
-                    <span className="font-bold text-black">{item.label}:</span>
+                  <p className="text-[#7D7D7D] ">
+                    <span className="font-bold text-black ">{item.label} : </span>
                     {item.description}
                   </p>
                 </div>

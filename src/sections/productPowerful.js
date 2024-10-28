@@ -37,18 +37,18 @@ function ProductPowerful() {
               {/* Card 1 */}
               <div className="relative  flex-grow">
                 {/* Corner Image */}
+               
+                <div className="bg-[#6162d1] text-white h-full z-10 border-1 border-[#8e90f154] shadow border rounded-2xl p-6 overflow-hidden relative">
                 <img
-                  src={corner}
-                  alt="corner"
-                  className="absolute top-[30px] right-[35px] transform translate-x-1/2 -translate-y-1/2 z-0"
-                  style={{ width: "80px" }} // Set size as necessary
-                />
-                <div className="bg-white h-full z-10 border-1 border-[#8e90f154] shadow border rounded-2xl p-6 overflow-hidden relative">
-                  <div className="text-[#6162d1] mb-4">
+                    src={ring}
+                    alt="speed"
+                    className=" absolute z-0 top-0 right-0 w-[60px]"
+                  />
+                  <div className=" mb-4 mt-12">
                   <SiGoogleanalytics size={30} />
                   </div>
                   <h3 className="text-xl font-bold mb-2">{t("productPowerful.accuracy.title")}</h3>
-                <p className="text-gray-600">{t("productPowerful.accuracy.description")}</p>
+                <p className="">{t("productPowerful.accuracy.description")}</p>
 
                 </div>
               </div>

@@ -4,17 +4,12 @@ import React, { useState, useEffect } from "react";
 import "../assets/styles/banner.scss";
 import { useTranslation } from "react-i18next";
 
-import SliderComponent from "./SliderComponent";
-
-import { rgba } from "polished";
-import { TypeAnimation } from "react-type-animation";
-import blurimg from "../assets/images/blur.png";
 import SliderBanner from "../components/SliderBanner";
 import InfiniteScrollX from "./InfiniteScrollX";
-import img1 from '../assets/images/slider/aws.webp';
-import img2 from '../assets/images/slider/NVIDIA_logo.svg';
-import img3 from '../assets/images/slider/monsha.svg';
-import img4 from '../assets/images/slider/vis.svg';
+import img1 from "../assets/images/slider/aws.webp";
+import img2 from "../assets/images/slider/NVIDIA_logo.svg";
+import img3 from "../assets/images/slider/monsha.svg";
+import img4 from "../assets/images/slider/vis.svg";
 
 const Banner = () => {
   const { i18n, t } = useTranslation();
@@ -53,7 +48,7 @@ const Banner = () => {
               {/* Ensure text is above image */}
               <h1 style={{ lineHeight: "1" }}>
                 <span className=" text-black gradient-text">
-                  <span className=" px-2 lg:text-[32px] text-[22px] font-[900]  leading-10">
+                  <span className="  lg:text-[32px] text-[22px] font-[900]  leading-10">
                     {" "}
                     {subHeaderText}
                   </span>
@@ -76,7 +71,6 @@ const Banner = () => {
               </p>
             </div>
             {/* Background image */}
-          
           </Box>
 
           <div className=" lg:flex w-full justify-center">

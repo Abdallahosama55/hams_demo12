@@ -16,18 +16,19 @@ function Subitem() {
       link: "/product", // Internal link
       new:false
     },
-    {
-      imgSrc: how02,
-      titleKey: "How-work-Title-02",
-      descriptionKey: "How-work-Description-02",
-      link: "/", // Internal link
-      new:true
-    },
+
     {
       imgSrc: how03,
       titleKey: "How-work-Title-03",
       descriptionKey: "How-work-Description-03",
       link: "/", // External link
+      new:false
+    },
+    {
+      imgSrc: how02,
+      titleKey: "How-work-Title-02",
+      descriptionKey: "How-work-Description-02",
+      link: "/", // Internal link
       new:true
     },
   ];
