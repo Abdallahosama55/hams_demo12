@@ -33,45 +33,48 @@ function SliderBanner() {
       <div className="relative mt-7 banner-div overflow-hidden flex justify-center slide-up transition-opacity duration-300">
     
         <div
-          className="z-0 gap-x-0 gap-y-0 items-start  justify-start grid-rows-[auto_auto] bg-white rounded-[170px] xl:grid-cols-[9fr_25fr_9fr] grid-cols-[9fr_22fr_9fr] auto-cols-fr w-full min-h-full grid absolute inset-x-0"
+          className="z-0 gap-x-0 gap-y-0 grid-rows-[auto_auto] grid-cols-[9fr_23fr_11fr] auto-cols-fr w-full min-h-full grid absolute inset-x-0 "
           dir="ltr"
         >
-           <img
+            {/* <img
             src={left}
             alt=""
-            className="phone_bg-image w-full"
+            className="phone_bg-image  "
             loading="lazy"
           />
           <img
             src={middle}
             alt=""
-            className="phone_bg-image w-full "
+            className="phone_bg-image  "
             loading="lazy"
           />
           <img
-            src={left}
+            src={right}
             alt=""
-            className="phone_bg-image w-full  rotate-180"
+            className="phone_bg-image   "
             loading="lazy"
-          /> 
-           {/* <StaticImage
+          />   */}
+           <StaticImage
             src="../assets/images/left.svg"
             alt=""
-            className="phone_bg-image"
+            className="phone_bg-image "
+            placeholder="none"  // Disable placeholder
             loading="lazy"
           />
           <StaticImage
             src="../assets/images/middle.svg"
             alt=""
-            className="phone_bg-image"
+            className="phone_bg-image "
+            placeholder="none"  // Disable placeholder
             loading="lazy"
           />
           <StaticImage
             src="../assets/images/right.svg"
             alt=""
-            className="phone_bg-image"
+            className="phone_bg-image "
+            placeholder="none"  // Disable placeholder
             loading="lazy"
-          /> */}
+          />  
         </div>
 
         <div className="content-img z-20 mt-12 flex flex-col mb-[8px] w-full lg:my-[40px] max-w-[80%] items-center text-xs justify-center text-start text-black">

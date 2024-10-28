@@ -31,11 +31,11 @@ function SliderButton({ currentItems, selectedId, handleSelectId }) {
           {currentItems.map((item, index) => (
             <button
               key={index}
-              className="flex justify-center w-full slider px-2 items-center h-12"
+              className="flex justify-center w-full slider px-2 items-center h-16"
               onClick={() => handleSelectId(index)}
             >
               <span
-                className={`rounded-full w-full py-1 h-full px-6 shadow-custom
+                className={`rounded-full w-full py-2 xl:py-1 lg:py-1 h-full px-6 shadow-custom
                   ${
                     selectedId === index
                       ? "bg-gradient-to-r text-white from-[#5253B9] to-[#8888C4]"
