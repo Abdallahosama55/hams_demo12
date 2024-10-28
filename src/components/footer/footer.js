@@ -13,10 +13,11 @@ const Footer = () => {
           {/* Product Section */}
           <div>
             <h3 className="font-semibold mb-4">{t('Product')}</h3>
-            <ul className="space-y-4">
+            <ul className="space-y-2">
               <li className="hover:text-[#333333] cursor-pointer transition-colors ease-in-out duration-300">{t('Speech-to-Text')}</li>
-              <li className="hover:text-[#333333] cursor-pointer transition-colors ease-in-out duration-300">{t('Text-to-Speech')}</li>
-              <li className="  transition-colors ease-in-out duration-300">{t('Audio Intelligence')} <span className=' bg-red-500 py-1 text-sm px-5 mx-2 rounded-lg'> {t('soon')}</span></li>
+
+              <li className=" hover:text-[#333333] cursor-pointer transition-colors ease-in-out duration-300">{t('Audio Intelligence')} </li>
+              <li className=" transition-colors ease-in-out duration-300">{t('Text-to-Speech')} <span className=' bg-red-500 py-1 text-sm px-5 mx-2 rounded-lg'> {t('soon')}</span></li>
             </ul>
           </div>
 
