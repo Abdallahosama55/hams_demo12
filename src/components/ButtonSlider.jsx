@@ -35,14 +35,14 @@ function SliderButton({ currentItems, selectedId, handleSelectId }) {
               onClick={() => handleSelectId(index)}
             >
               <div
-                className={`rounded-full w-full  flex items-center py-0 justify-center md:h-9 xl:h-10 h-9 lg:h-10 px-6 shadow-custom
+                className={`rounded-3xl w-full  flex items-center py-0 justify-center md:h-9 xl:h-10 h-9 lg:h-10 px-6 shadow-custom
                   ${
                     selectedId === index
                       ? "bg-[#5253B9] text-white "
                       : "bg-white text-black border"
                   }`}
               >
-                {item.title}
+               <span> {item.title}</span>
               </div>
             </button>
           ))}
