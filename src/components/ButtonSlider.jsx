@@ -42,7 +42,7 @@ function SliderButton({ currentItems, selectedId, handleSelectId }) {
                       : "bg-white text-black border"
                   }`}
               >
-               <span> {item.title}</span>
+                <span className="leading-none">{item.title}</span>
               </div>
             </button>
           ))}
@@ -50,10 +50,11 @@ function SliderButton({ currentItems, selectedId, handleSelectId }) {
       ) : (
         <div className="flex items-center justify-center animate-pulse space-x-4">
           {[1, 2, 3].map((_, idx) => (
-            <div key={idx} className="flex justify-center w-full slider px-2 items-center h-9">
-              <span
-                className="rounded-full w-[120px] py-1 h-full px-6 bg-gray-300"
-              ></span>
+            <div
+              key={idx}
+              className="flex justify-center w-full slider px-2 items-center h-9"
+            >
+              <span className="rounded-full w-[120px] py-1 h-full px-6 bg-gray-300"></span>
             </div>
           ))}
         </div>
