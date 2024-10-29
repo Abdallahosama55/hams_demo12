@@ -34,7 +34,7 @@ function SliderButton({ currentItems, selectedId, handleSelectId }) {
               className="flex justify-center w-full slider px-2 items-center h-16"
               onClick={() => handleSelectId(index)}
             >
-              <span
+              <div
                 className={`rounded-full w-full  flex items-center py-0 justify-center md:h-9 xl:h-10 h-9 lg:h-10 px-6 shadow-custom
                   ${
                     selectedId === index
@@ -43,7 +43,7 @@ function SliderButton({ currentItems, selectedId, handleSelectId }) {
                   }`}
               >
                 {item.title}
-              </span>
+              </div>
             </button>
           ))}
         </Slider>
