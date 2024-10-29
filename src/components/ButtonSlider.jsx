@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -35,7 +35,7 @@ function SliderButton({ currentItems, selectedId, handleSelectId }) {
               onClick={() => handleSelectId(index)}
             >
               <span
-                className={`rounded-full w-full  flex items-center py-0 justify-center  h-10 px-6 shadow-custom
+                className={`rounded-full w-full  flex items-center py-0 justify-center md:h-9 xl:h-10 h-9 lg:h-10 px-6 shadow-custom
                   ${
                     selectedId === index
                       ? "bg-[#5253B9] text-white "
