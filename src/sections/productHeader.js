@@ -59,7 +59,7 @@ function ProductHeader() {
             </div>
           </div>
 
-          <div className="flex justify-center h-full mt-12 items-center">
+          <div className="flex justify-center h-full mt-12 items-center slide-up">
             <img src={Product1} alt="text_speach_Ai" />
           </div>
         </div>

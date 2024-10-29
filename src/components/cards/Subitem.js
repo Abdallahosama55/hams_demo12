@@ -7,14 +7,14 @@ import how03 from "../../assets/images/AI-to-speech.svg";
 
 function Subitem() {
   const { t } = useTranslation();
-  
+
   const steps = [
     {
       imgSrc: how01,
       titleKey: "How-work-Title-01",
       descriptionKey: "How-work-Description-01",
       link: "/product", // Internal link
-      new:false
+      new: false,
     },
 
     {
@@ -22,14 +22,14 @@ function Subitem() {
       titleKey: "How-work-Title-03",
       descriptionKey: "How-work-Description-03",
       link: "/", // External link
-      new:false
+      new: false,
     },
     {
       imgSrc: how02,
       titleKey: "How-work-Title-02",
       descriptionKey: "How-work-Description-02",
       link: "/", // Internal link
-      new:true
+      new: true,
     },
   ];
 
@@ -55,8 +55,9 @@ function Subitem() {
                 </div>
                 <div>
                   <h1 className="font-semibold">{t(item.titleKey)}</h1>
-                  <p className="text-xs text-[#929292]">{t(item.descriptionKey)}</p>
-                  
+                  <p className="text-xs text-[#929292]">
+                    {t(item.descriptionKey)}
+                  </p>
                 </div>
               </a>
             ) : (
@@ -67,14 +68,27 @@ function Subitem() {
                 className="flex gap-2 items-start  text-gray-700 hover:text-[#5253B9] hover:bg-[#cfcece28] px-6 rounded-xl cursor-pointer p-3 transition-all duration-300 ease-in-out hover:text-[16px]"
               >
                 <div>
-                  <img src={item.imgSrc} alt={item.titleKey} className=" mt-3" />
+                  <img
+                    src={item.imgSrc}
+                    alt={item.titleKey}
+                    className=" mt-3"
+                  />
                 </div>
                 <div>
-                  <h1 className="font-semibold py-2 flex gap-3 ">{t(item.titleKey)} 
-                    
-                  {item.new?
-                    <span className=" rounded-lg bg-red-500 p-[3px] px-5 text-xs text-white">{t('soon')}</span> :""}</h1>
-                  <p className="text-xs text-[#929292]">{t(item.descriptionKey)}</p>
+                  <h1 className="font-semibold py-2 flex gap-3 ">
+                    {t(item.titleKey)}
+
+                    {item.new ? (
+                      <span className=" rounded-lg bg-red-500 p-[3px] px-5 text-xs text-white">
+                        {t("soon")}
+                      </span>
+                    ) : (
+                      ""
+                    )}
+                  </h1>
+                  <p className="text-xs text-[#929292]">
+                    {t(item.descriptionKey)}
+                  </p>
                 </div>
               </GatsbyLink>
             );
@@ -89,7 +103,10 @@ function Subitem() {
             const isExternal = item.link.startsWith("http");
 
             return (
-              <li key={index} className="py-2 border-b-[1px] border-[#00000056]">
+              <li
+                key={index}
+                className="py-2 border-b-[1px] border-[#00000056]"
+              >
                 {isExternal ? (
                   <a
                     href={item.link}
@@ -102,9 +119,16 @@ function Subitem() {
                 ) : (
                   <GatsbyLink
                     to={item.link}
-                    className="text-gray-700 hover:text-[#5253B9] transition-all duration-300"
+                    className=" flex items-center gap-3"
                   >
                     {t(item.titleKey)}
+                    {item.new ? (
+                      <span className=" rounded-lg bg-red-500 p-[3px] px-5 text-xs text-white">
+                        {t("soon")}
+                      </span>
+                    ) : (
+                      ""
+                    )}
                   </GatsbyLink>
                 )}
               </li>
