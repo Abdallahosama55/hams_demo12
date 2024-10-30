@@ -7,7 +7,10 @@ import { Link as GatsbyLink, navigate } from "gatsby"; // Import Gatsby's Link a
 import Logo from "components/logoHeader";
 import "../../i18n/config";
 import Subitem from "../cards/Subitem";
-import { MdOutlineKeyboardArrowDown, MdOutlineKeyboardArrowUp } from "react-icons/md";
+import {
+  MdOutlineKeyboardArrowDown,
+  MdOutlineKeyboardArrowUp,
+} from "react-icons/md";
 
 export default function Header() {
   const { t, i18n } = useTranslation();
@@ -19,14 +22,12 @@ export default function Header() {
     { name: "product", anchor: "", subItem: true },
     { name: "How it work", anchor: "HowUseIt", subItem: false },
     { name: "FAQs", anchor: "FAQs", subItem: false },
- 
   ];
-  
 
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
-  
+
   useEffect(() => {
     const initialLang = i18n.language;
     document.documentElement.setAttribute("lang", initialLang);
@@ -46,7 +47,7 @@ export default function Header() {
     if (window.location.pathname !== "/") {
       // Navigate to the homepage first if on a different page
       navigate("/");
-      
+
       // Add a short delay to ensure the navigation completes before scrolling
       setTimeout(() => {
         scroller.scrollTo(anchor, {
@@ -72,7 +73,10 @@ export default function Header() {
         onMouseLeave={() => setHoveredItem(null)}
       >
         {item.isHome ? (
-          <GatsbyLink to={item.anchor} className="transition duration-300 cursor-pointer">
+          <GatsbyLink
+            to={item.anchor}
+            className="transition duration-300 cursor-pointer"
+          >
             <span className="flex items-center text-gray-700 hover:text-[#5253B9]">
               {t(item.name)}
             </span>
@@ -106,21 +110,26 @@ export default function Header() {
   return (
     <div className="fixed w-full z-50 backdrop-blur-md bg-transparent">
       <nav className="flex justify-between lg:mx-24 mx-6 py-5">
-        <GatsbyLink to={'/'} className="cursor-pointer">
+        <GatsbyLink to={"/"} className="cursor-pointer">
           <Logo />
         </GatsbyLink>
-        
+
         <button className="block lg:hidden text-2xl" onClick={toggleSidebar}>
           &#9776;
         </button>
 
-        <ul id="main-menu" className={`hidden lg:flex items-center gap-12 justify-center`}>
+        <ul
+          id="main-menu"
+          className={`hidden lg:flex items-center gap-12 justify-center`}
+        >
           {renderMenuItems()}
         </ul>
 
         <div className="button-group hidden lg:flex gap-5 items-center">
-          <button className="bg-[#5253B9] shadow-xl text-white w-[100px] py-1 rounded-3xl">
-            {t("Signup")}
+          <button className="bg-[#5253B9] shadow-xl text-white   px-4 py-1 rounded-3xl">
+            <a href="https://m26ulnzthn4.typeform.com/to/LgVAbyBc">
+              {t("Signup")}
+            </a>
           </button>
           <button
             onClick={changeLanguage}
@@ -141,13 +150,18 @@ export default function Header() {
           className="bg-white flex flex-col w-64 h-full p-5"
           onClick={(e) => e.stopPropagation()}
         >
-          <ul id="main-menu-mobile" className={`flex flex-col w-full flex-grow gap-3`}>
+          <ul
+            id="main-menu-mobile"
+            className={`flex flex-col w-full flex-grow gap-3`}
+          >
             {renderMenuItems()}
           </ul>
 
           <div className="button-group flex flex-col gap-5 items-start mt-5">
             <button className="bg-[#5253B9] shadow-xl text-white lg:w-[100px] w-full py-1 rounded-3xl">
+            <a href="https://m26ulnzthn4.typeform.com/to/LgVAbyBc">
               {t("Signup")}
+            </a>
             </button>
             <button
               onClick={changeLanguage}
