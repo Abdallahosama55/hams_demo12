@@ -31,8 +31,8 @@ const Banner = () => {
   }, [i18n]);
 
   return (
-    <section id="home" sx={styles.section} className="  gradient-bg-header ">
-      <div className="lg:mx-24 py-12 lg:py-2   ">
+    <section id="home" sx={styles.section} className=" w-full flex justify-center flex-col  gradient-bg-header ">
+      <div className="lg:px-24 py-12 lg:py-2   ">
         <div className="grid justify-center xl:min-h-[90vh] h-full items-center xl:grid-cols-2 grid-cols-1  md:grid-cols-1 sm:grid-cols-1 ">
           <Box
             sx={styles.bannerContent}
