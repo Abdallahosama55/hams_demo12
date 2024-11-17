@@ -14,7 +14,6 @@ import Problems from "sections/Problems";
 import HowItWorks from "sections/HowItWorks";
 import WhatBenfit from "../sections/WhatBenfit";
 import OurMission from "../sections/OurMission";
-import HeaderAi from "@/components/HeaderAi";
 
 export default function IndexPage() {
   useEffect(() => {
@@ -27,7 +26,6 @@ export default function IndexPage() {
         title="Hams.AI"
         description="حول النص للصوت, افضل ذكاء أصطناعي بالغة العربية, حول جميع مكلماتك لذكاء اصطناعي"
       />
-      <HeaderAi />
       <Banner />
       <WhatBenfit />
       <OurMission />
