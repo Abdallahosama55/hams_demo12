@@ -15,16 +15,16 @@ function AudioIntellgance() {
   }, []);
   return (
 
-<Layout>
+    <Layout>
       <SEO
         title="Hams.AI"
         description="حول النص للصوت, افضل ذكاء أصطناعي بالغة العربية, حول جميع مكلماتك لذكاء اصطناعي"
       />
-<HeaderAi/>
-  <ProductPowerful/>
-  <ProductRate/>
-  {/* <ProductUsecase/> */}
-  <ProductOptimizedUseCase/>
+      <HeaderAi />
+      <ProductPowerful />
+      <ProductRate />
+      {/* <ProductUsecase/> */}
+      <ProductOptimizedUseCase />
 
     </Layout>
 
